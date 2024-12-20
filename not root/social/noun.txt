@@ -43,3 +43,8 @@ yeniya
 	enemy
 	opposition
 	foe
+
+zavafla
+	welfare
+	health
+	welbeing
