@@ -1,0 +1,17 @@
+base 10 positional
+
+ㅇ - 0 - ovela
+ㅡ - 1 - voska
+ㅏ - 2 - luvera
+ㅑ - 3 - ovka
+ㄹ - 4 - kova
+ㅂ - 5 - faika
+ㅍ - 6 - dov
+ㄱ - 7 - sfon
+ㄴ - 8 - atilo
+ㅊ - 9 - raki
+. - decimal - tesi
+- - negative
+
+ㅑ.ㅡㄹ - ovka tesi voska kova - 3.14
+ㅏㅇ - luvera ovela - 20

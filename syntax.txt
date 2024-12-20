@@ -1,0 +1,20 @@
+SVO
+
+preposition -> noun
+adjective -> noun
+adverb -> verb
+possessed suffix -> possessor suffix
+
+
+
+adjective order:
+determiner (eg: your)
+origin (eg: European)
+quantity (eg: 3)
+shape (eg: round)
+size (eg: small)
+opinion (eg: cute)
+colour (eg: red)
+qualifier (eg: [pickup] truck)
+age (eg: new)
+material (eg: cloth)

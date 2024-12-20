@@ -1,0 +1,24 @@
+examples don't need to be real
+() means that the a letter can be added (eg: (o)ye, ala -> alaye, alas -> alasoye)
+<> means that the previous letter WILL be either overridden or added (eg: <v>u, fal -> favu, fala -> falavu)
+
+<v>u - plural
+
+(k)aro - use noun as modifier or adjective
+(v)aro - use verb as modifier or adjective
+
+(y)a - possessed
+(o)ye - possessor
+
+<m>ale - male living thing
+<m>ula - female living thing
+<m>ava - other gender living thing
+
+(v)a - country / place
+(v)e - continent
+(v)al - language
+(v)o - demonym
+
+<p>ila - adjective to pronoun (eg: most -> most people)
+
+(i)fay - to make

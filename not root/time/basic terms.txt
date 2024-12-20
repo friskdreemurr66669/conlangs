@@ -1,0 +1,35 @@
+trav
+	time
+
+kolsa
+	second
+miny
+	minute
+talara
+	hour
+tov
+	day
+lera
+	month
+elas
+	year
+
+taka
+	late
+lofko
+	early
+
+usla
+	hundreds/century
+
+
+
+muda
+	modern
+	current
+
+palas
+	past
+
+luhay
+	future

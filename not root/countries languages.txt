@@ -1,0 +1,14 @@
+country name        demonym	    	language name
+espaniya            espaniyo        espaniyal       - spain//spanish
+fronsa              fronso  		fronsal         - france//french
+hanuka              hanuko          hanukal         - korea//korean
+inlanta             inlanto			inlantal	    - uk//english
+italiya             italiyo         italiyal        - italy//italian
+japana              japano			japanal         - japan//japanese
+mongola             mongolo			mongolal        - mongolia//mongolian
+murika              muriko                          - united states/american
+ostraliya           ostraliyo                       - australia//australian
+roma                romo            latinal         - rome/roman/latin
+rosiya              rosiyo          rosiyal         - russia//russian
+viyetna             viyetno         viyetnal        - vietnam//vietnamese
+jonuha              jonuho          jonuhal         - china//chinese

@@ -1,0 +1,29 @@
+cvc, cvcc, ccvc, vc, cv, v
+
+you need a y between an i and any other vowel (eg: ia to iya)
+you need an i between a y and any other consonant (eg: dya to diya)
+there can be no iy without a vowel after it
+if there is an i at the end of a word, it's changed to a y (klavi -> klavy)
+when a word ends with y and there's a suffix, it's changed to either i or removed
+
+phonetic spelling
+
+fricatives cannot follow plosives
+
+no double letters
+the only consecutive vowels are diphthongs (they can follow y even if it's used as a vowel)
+
+words cannot end with plosives, h, r
+
+if affix leads to a consecutive vowel, only use the first vowel (shouldn't be used if the word/the affix is setup properly)
+if affix leads to a duplicate consonant, only use 1 consonant (shouldn't be used if the word/the affix is setup properly)
+
+words can be just a consonant
+
+
+
+diphthongs
+ay - ɑɪ
+ey - eɪ
+oy - ɔɪ
+uy - ui

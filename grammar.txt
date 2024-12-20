@@ -1,0 +1,20 @@
+- only proper nouns are capitalised, and only the Na. countries/languages/demonyms/political parties don't count
+- no tense
+- punctuation
+	- . - regular sentence ender
+	- ! - emphasis / exclaim sentences
+	- ? - question sentence
+	- ࿂ - understanding / acceptance sentence (eg: "oh, ok", "sure")
+	- ☭ - less emphasis / unimportant sentence
+	- ⍛ - command
+	- ࿈ - suggestion
+	- ᧦ - plea
+
+	- , - list item separator
+- to make a question, put question particle keston at the end of the sentence
+- every question needs a "keston?"
+- language / place / country roots are based off of what they call themselves in their native language (eg Deutschland instead of Germany), also don't need prefix Na(v)
+- sentences don't need subjects if it can be inferred from context or easily guessed
+- if talking about a possessor that hasn't been established yet and can be easily inferred from context, drop the possessor (eg: i love my family -> i love family)
+
+- you call your father "atuy" and mother "oma"

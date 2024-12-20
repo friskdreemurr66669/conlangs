@@ -1,0 +1,18 @@
+examples don't need to be real
+() means that the a letter can be added (eg: na(k), ala -> nakala, sala -> nasala)
+<> means that the next letter can be overridden (eg: na<k>, fal -> nakal, al -> nakal)
+
+na(v) - name
+pat(i) - political party
+rel(a) - a religion
+vel(a) - one who follows a religion
+rej(i) - regime
+
+o(b) - adjective/adverb/preposition used as subject
+su(b) - adjective/adverb/preposition used as object
+
+l(a) - repeated (re-)
+
+y(e) - adjective to adverb (eg: daka -> yedaka)
+r(o) - adjective to noun (eg: key -> rokey)
+s(o) - verb to noun (eg: kruva -> sokruva)

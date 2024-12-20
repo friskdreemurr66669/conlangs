@@ -1,0 +1,16 @@
+if y is used after a vowel (excluding i) or ending a word, it's pronounced /i/.
+
+when there's a iy, the i isn't pronounced if it's unstressed
+
+unstressed a is pronounced ɑ (open back, not central unstressed open a)
+unstressed e is pronounced ɜ
+unstressed o is pronounced ə
+unstressed i is pronounced ɪ
+unstressed u is pronounced ɤ
+
+if the last letter of a word is an unstressed vowel (and isn't a diphthong), it can be pronounced ə
+
+when a word is just a consonant, it is either pronounced as an affix (by default a suffix)
+if the single consonant word doesn't as a suffix or prefix (both sides are already blocked by other consonants), use it as a single word with a ə after
+
+there is a small pause after punctuation

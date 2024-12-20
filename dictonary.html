@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h1>Okiyaval Dictionary</h1>
+    <div id="words_div"></div>
+
+    <hr>
+    <h1>Fan Added Words</h1>
+    <hr style="margin: 100px;">
+
+    <div id="comm_div"></div>
+</body>
+
+
+
+<head>
+    <title>Okiyaval Dictionary</title>
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+    </style>
+
+    <script>
+
+        //#region scripts
+        function definition(word, definitions, example) {
+            const container = document.createElement('div');
+            const tab = "⠀⠀⠀⠀";
+
+
+            // Create the h2 element
+            const h2 = document.createElement('h2');
+            h2.textContent = word;
+            container.appendChild(h2);
+
+            definitions.forEach(item => {
+                const type = document.createElement('h4');
+                type.textContent = tab + item[0];
+                container.appendChild(type);
+
+                const ol = document.createElement('ol');
+                container.appendChild(ol);
+
+                item[1].forEach(subitem => {
+                    const li = document.createElement('li');
+                    li.textContent = `\t${subitem}`;
+                    ol.appendChild(li);
+                });
+            });
+
+            const examples = document.createElement('ul');
+            example.forEach(item => {
+                if (item[0] != '') {
+                    const ex = document.createElement('li');
+                    ex.textContent = `example: ${item[0]}`;
+                    examples.appendChild(ex);
+
+                    //translation
+                    const trans = document.createElement('span');
+                    trans.textContent = `${tab}translation: ${item[1]}`;
+                    examples.appendChild(trans);
+                }
+            });
+            container.appendChild(examples);
+
+            return container
+        }
+
+        function new_definition(word, definitions, example) {
+            document.getElementById("words_div").appendChild(definition(word, definitions, example));
+        }
+
+        function fanmade_definition(word, definitions, example) {
+            document.getElementById("comm_div").appendChild(definition(word, definitions, example));
+        }
+
+        function newletter() {
+            const separator = document.createElement('hr');
+            separator.classList.add("newletters");
+            document.getElementById("words_div").appendChild(separator);
+        }
+        function new_fanmade_letter() {
+            const separator = document.createElement('hr');
+            separator.classList.add("newletters");
+            document.getElementById("comm_div").appendChild(separator);
+        }
+
+        //#endregion
+
+        const tokara = "(made for a fictional religion i made but can be used for any religion)";
+
+        /*
+        new_definition('', [['', ['']]], [['', '']]);
+        
+        */
+        new_definition(',', [['conjunction', ['list separator, requires space around']]], [['tasal , turval', "life, death"]]);
+        newletter();
+        new_definition('a', [['pronoun', ['I', 'me', 'myself']]], [['a slika rilavy.', 'I love my family.']]);
+        new_definition('alov', [['adjective', ['all']]], [['alov davakun no fizika volara.', 'Not all wars are physical battles.']]);
+        new_definition('arim', [['noun', ['world', 'planet', 'Earth']]], [['zuixa arim⍛', 'Save the world.'], ['vy tuv osa arim.', 'We live on Earth.']]);
+        new_definition('ariva', [['verb', ['go', 'come', 'arrive']]], [['ariva⍛', 'Come.']]);
+        new_definition('atuv', [['noun', ['anthem', 'national anthem']]], [['xuil atuva viye⍛', 'Sing our national anthem!']]);
+        new_definition('atuy', [['noun', ['father', 'dad']]], [['a slika atuy.', 'I love my dad.'], ['atuy, lo viye keston?', 'Dad, where are you?']]);
+        newletter();
+        new_definition('daka', [['adjective', ['total', 'complete', 'absolute']]], [['juga sudaka', 'The jar is full.']]);
+        new_definition('daka munitela', [['noun', ['absolute monarchy']]], [['otal fronsa otav daka munitela.', 'Old France was an absolute monarchy.']]);
+        new_definition('davakun', [['noun', ['war', 'battle']]], [['rosiyo revol kutava sivy davakun suvol patipolsevika , rejizar.', 'The Russian revolution contained a civil war between the Bolsheviks and the Tsarist Regime.']]);
+        newletter();
+        new_definition('elas', [['noun', ['year']]], [['iva elas ㅏㅇㅏㄹ azov vena raif si.', 'It is the year 2024 as of writing this.']]);
+        new_definition('espaniya', [['noun', ['Spain']]], [['espaniya valska.', 'Spain is a country.']]);
+        new_definition('espaniyal', [['noun', ['Spanish language']]], [['a no tolva espaniyal.', 'I don\'t speak Spanish.']]);
+        new_definition('espaniyano', [['adjective', ['Spanish']]], [['espaniyano keston?', 'Are you Spanish?']]);
+        newletter();
+        new_definition('feil', [['verb', ['fail', 'lose']]], [['lo feil keston?', 'Did you lose?']]);
+        new_definition('fizika', [['adjective', ['physical']]], [['fizika tuka', 'physical contact']]);
+        new_definition('fratav', [['noun', ['friend', 'companion']]], [['lo slika fratava aye keston?', 'Do you want to be my friend?']]);
+        new_definition('fronsa', [['noun', ['France']]], [['munitely fronsa.', 'imperial france']]);
+        new_definition('fronsal', [['noun', ['French language']]], [['a no tolva fronsal.', 'I don\'t speak French.']]);
+        new_definition('fronso', [['adjective', ['French']]], [['lo fronso keston?', 'Are you French?']]);
+        new_definition('fula', [['adjective', ['full']]], [['juga fula.', 'The jar is full.']]);
+        newletter();
+        new_definition('ha', [['exclamation', ['hmm, *thinking noise*']]], [['ha, vox vy keston?', 'Hmm, what were we doing?']]);
+        new_definition('hal', [['preposition', ['near', 'close', 'close to']]], [['mongola hal rossiya.', 'Mongolia is near Russia.']]);
+        new_definition('hanuka', [['noun', ['Korea']]], [['zeva ㅏ hanuka.', 'There are 2 Koreas.']]);
+        new_definition('hanukal', [['noun', ['Korean language']]], [['lo tolva hanukal keston?', 'Do you speak Korean.']]);
+        new_definition('hanuko', [['adjective', ['Korean']]], [['hanuko rilavy', 'a Korean family']]);
+        new_definition('hiko', [['noun', ['sin ' + tokara]]], [['relakristiyan voskita sokruva hiko.', 'Christians consider murder to be a sin.']]);
+        new_definition('hiva', [['verb', ['live', 'exist']]], [['kavaparetaya loye hiva keston?', 'Are your grandparents alive?']]);
+        new_definition('hu', [['pronoun', ['who']]], [['hu lo keston?', 'Who are you?']]);
+        newletter();
+        new_definition('inlanta', [['noun', ['United Kingdom', 'Britain', 'England']]], [['inlanta kolonifay hota valska.', 'The United Kingdom colonized a lot of countries.']]);
+        new_definition('inlantal', [['noun', ['English language']]], [['a tolva inlantal.', 'I speak English.']]);
+        new_definition('inlanto', [['adjective', ['English', 'British', 'from the United Kingdom']]], [['lo inlanto keston?', 'Are you British?']]);
+        new_definition('iv', [['pronun', ['we (excluding you)']]], [['iv vin v la feil.', 'We win, you lose.']]);
+        new_definition('iva', [['noun', ['it (used in the normal subject position in statements about time, distance, or weather.)']]], [['iva taka.', 'It\'s late.']]);
+        new_definition('ivexy', [['verb', ['make', 'create', 'invent']]], [['Namahu Nazeidon ivexy relavy nonitely jonuha.', 'Mao Zedong created the Peoples\' Republic of China.']]);
+        new_definition('ivora', [['adjective', ['new', 'recent']]], [['sy subivora keston?', 'Is this new?']]);
+        new_definition('ix', [['pronoun', ['they']]], [['lo mita ix keston?', 'Do you know them?']]);
+        newletter();
+        new_definition('jalfa', [['noun', ['karma ' + tokara]]], [['jalfaya aye -ㄴ.', 'My karma is -8.']]);
+        new_definition('japana', [['noun', ['Japan']]], [['japana no inlanto kolon.', 'Japan is not a British colony.']]);
+        new_definition('japanal', [['noun', ['Japanese language']]], [['a no tolva japanal.', 'I don\'t speak Japanese.']]);
+        new_definition('japano', [['adjective', ['Japanese']]], [['lo japano keston?', 'Are you Japanese?']]);
+        new_definition('jonuha', [['noun', ['China']]], [['japana , jonuha', 'Japan and China']]);
+        new_definition('jonuhal', [['noun', ['Chinese language']]], [['a no tolva jonuhal.', 'I don\'t speak Chinese.']]);
+        new_definition('jonuho', [['adjective', ['Chinese']]], [['lo jonuho keston?', 'Are you Chinese?']]);
+        new_definition('juga', [['noun', ['jug', 'jar']]], [['juga fula keston?', 'Is the jar full?']]);
+        newletter()
+        new_definition('ka', [['exclamation', ['negative exclamation', 'oh', 'damn it']]], [['ka, a feil.', 'Oh, I lost.']]);
+        new_definition('kainas', [['adjective', ['nice', 'kind']]], [['lo kainas.', 'You\'re nice.']]);
+        new_definition('kalstov', [['noun', ['dust', 'sand', 'powder']]], [['a kuraly kalstov.', 'I hate sand.']]);
+        new_definition('kavapareta', [['noun', ['grandparent', 'grandparents']]], [['kavaparetaya loye hiva keston?', 'Are your grandparents alive?']]);
+        new_definition('kavatuy', [['noun', ['grandpa', 'grandfather']]], [['kavatuiya loye kainas.', 'Your grandpa is nice.']]);
+        new_definition('kavoma', [['noun', ['grandma', 'grandmother']]], [['kavomaiya loye kainas.', 'Your grandma is nice.']]);
+        new_definition('key', [['adjective', ['gay', 'lesbian', 'homosexual']]], [['nekopila muv key.', 'The next person to move is gay.']]);
+        new_definition('kolon', [['noun', ['colony']]], [['murika otav inlanto kolon.', 'The United States used to be a British Colony.']]);
+        new_definition('kolsa', [['noun', ['second']]], [['veita ㅡ kolsa.', 'Wait a second.']]);
+        new_definition('komunizm', [['noun', ['communism']]], [['lo zuixa komunizm keston?', 'Do you suppport communism?']]);
+        new_definition('komunizmy', [['adjective', ['communist']]], [['sa komunizmy keston?', 'Is that a communist?']])
+        new_definition('korteva', [['verb', ['break', 'destroy', 'demolish', 'break']]], [['hu korteva juga keston?', 'Who broke the jug?']]);
+        new_definition('kraito', [['adjective', ['straight (sexual orientation)', 'is attracted to people of the other gender']]], [['lo kraito keston?', 'Are you straight?']]);
+        new_definition('kruva', [['verb', ['kill', 'murder', 'slaughter']]], [['la nova hu kruva va keston?', 'Do any of you know who killed him?']]);
+        newletter();
+        new_definition('la', [['pronoun', ['you (plural)', 'you all', 'you guys']]], [['viye la keston?', 'Where are you all?']]);
+        new_definition('lafs', [['verb', ['can']]], [['lo lafs voskita keston?', 'You can think?']]);
+        new_definition('laka', [['adjective', ['big', 'massive']]], [['sy laka palasky.', 'This is a big park.']]);
+        new_definition('lapifel', [['noun', ['rebirth ' + tokara]]], [['', '']]);
+        new_definition('lasay', [['adjective', ['okay', 'fine', 'good condition', 'all right']]], [['', '']]);
+        new_definition('lasta', [['conjunction', ['because']]], [['a kuraly va lasta korteva jugaya aye.', 'I hate him because he broke my jug.']]);
+        new_definition('lasy', [['verb', ['die', 'don\'t exist']]], [['va lasy.', 'He died.'], ['a lasy.', 'I don\'t exist.']]);
+        new_definition('latinal', [['noun', ['latin language']]], [['a no tolva latinal.', 'I don\'t speak Latin.']]);
+        new_definition('lav', [['exclamation', ['oh (neutral emotion)', 'oh (realisation)']]], [['lav, va࿂', 'Oh, okay.']]);
+        new_definition('lavo', [['verb', ['work', 'labour']]], [['lo lavo keston?', 'Do you work?']]);
+        new_definition('lepara', [['verb', ['ready', 'prepare']]], [['lepara slako⍛', 'Make dinner.']]);
+        new_definition('lera', [['noun', ['month']]], [['nalu lera voskaluveralera.', 'The current month is December.']]);
+        new_definition('livora', [['noun', ['priority']]], [['', '']]);
+        new_definition('lo', [['pronoun', ['you (singular)']]], [['lo no a.', 'You are not me.']]);
+        new_definition('lofko', [['adjective', ['early']]], [['lo ariva sulofko.', 'You\'re early.']]);
+        new_definition('loka', [['noun', ['roadblock', 'block', 'obstacle']]], [['korteva zata loka.', 'Destroy that obstacle.']]);
+        new_definition('luhay', [['noun', ['future']]], [['a skada luhay.', 'I am scared of the future.']]);
+        newletter()
+        new_definition('miny', [['noun', ['minute']]], [['veita miny᧦', 'Wait a minute.']]);
+        new_definition('mita', [['verb', ['meet', 'has met', 'know someone']]], [['lo mita va keston?', '']]);
+        new_definition('mongola', [['noun', ['Mongolia']]], [['lo slika ariva mongola keston?', 'Do you want to go Mongolia?']]);
+        new_definition('mongolal', [['noun', ['Mongolian language']]], [['a no tolva mongolal.', 'I don\'t speak Mongolian.']]);
+        new_definition('mongolo', [['adjective', ['Mongolian']]], [['lo sumongolo keston?', 'Are you Mongolian?']]);
+        new_definition('mosta', [['adjective', ['most']]], [['hu lo kuraly sumosta keston?', 'Who do you hate the most?']]);
+        new_definition('muda', [['adjective', ['modern', 'current']]], [['muda inlanto munika Nawalz munika.', 'The current British monarch is King Charles.']]);
+        new_definition('munika', [['noun', ['queen', 'king', 'monarch', 'emperor', 'empress', 'empire', 'goes after a name to show that they are a monarch']]], [['muda inlanto munika Nawalz munika.', 'The current British monarch is King Charles.']]);
+        new_definition('munitela', [['noun', ['monarchy', 'comes from otelaya munikaye (monarch\'s power)']]], [['otal rosiya otav munitela.', 'Russia was a monarchy.']]);
+        new_definition('munitely', [['adjective', ['imperial', 'relating to an empire']]], [['munitely japana', 'imperial Japan']]);
+        new_definition('murika', [['noun', ['United States of America']]], [['lo slika ariva murika keston?', 'Do you want to go America?']]);
+        new_definition('muriko', [['adjective', ['American']]], [['lo sumuriko keston?', 'Are you American?']]);
+        new_definition('muv', [['verb', ['move', 'do']]], [['muv juga࿈', 'Move the jar.'], ['lo muv vox keston?', 'What are you doing?']]);
+        newletter()
+        new_definition('naka', [['phrase', ['how about you', 'what about you', 'and you']]], [['a suviyetno, naka keston?', 'I\'m Vietnamese, what about you?']]);
+        new_definition('nalu', [['adverb', ['now', 'current', 'present']]], [['oviye nalu lo keston?', 'Where are you now?']]);
+        new_definition('nay', [['exclamation', ['no', 'nah', 'nuh uh']]], [['nay, va no.', 'No, he\'s not.']]);
+        new_definition('nayem', [['noun', ['name']]], [['lo nayem vox keston?', 'What\'s your name?']]);
+        new_definition('neko', [['adjective', ['next']], ['adverb', ['next']]], [['lo neko tov muv vox keston?', 'What are you doing tomorrow?']]);
+        new_definition('nikes', [['noun', ['soul ' + tokara]]], [['lo xasa nikes keston?', 'You have a soul?']]);
+        new_definition('no', [['adverb', ['not']]], [['lo no a.', 'You are not me.']]);
+        new_definition('nonitel', [['noun', ['republic']]], [['murika sunonitel.', 'The United States of America is a republic.']]);
+        new_definition('nonitely', [['adjective', ['republican', 'relating to a republic']]], [['relavy nonitely jonuha', 'Peoples\' Republic of China']]);
+        new_definition('nova', [['verb', ['know']]], [['lo nova vawa va lasy keston?', 'Do you know how he died?']]);
+        newletter()
+        new_definition('oka', [['exclamation', ['okay', 'right', 'all right']]], [['oka atuy.', 'Okay dad.']]);
+        new_definition('okliva', [['preposition', ['in', 'inside']]], [['votara okliva juga', 'water in a jar']]);
+        new_definition('ol', [['conjunction', ['or']]], [['inlantal ol espaniyal keston?', 'English or Spanish?']]);
+        new_definition('olav', [['adverb', ['only']]], [['a olav truxava trey.', 'I only eat plants.']]);
+        new_definition('olivy', [['noun', ['sister']]], [['a no xasa olivy.', 'I don\'t have a sister.']]);
+        new_definition('olkav', [['noun', ['brother']]], [['a no xasa olkav.', 'I don\'t have a brother.']]);
+        new_definition('oma', [['noun', ['mother']]], [['lo oma hu keston?', 'Who is your mother?']]);
+        new_definition('onema', [['noun', ['master', 'owner']]], [['onemaya viye no munika.', 'Our leader is not the king.']]);
+        new_definition('osa', [['preposition', ['on']]], [['roka osa kalstov', 'a rock on sand']]);
+        new_definition('ostraliya', [['noun', ['Australia']]], [['otal ostraliya otav kolonaya inlantoye.', 'Australia was a British colony.']]);
+        new_definition('ostraliyo', [['adjective', ['Australian']]], [['lo subostraliyo keston?', 'Are you Australian?']]);
+        new_definition('otal', [['adjective', ['old', 'ancient', 'previous']]], [['otal roma', 'ancient rome']]);
+        new_definition('otav', [['adverb', ['was', 'used to be']]], [['a otav tolva va.', 'I used to talk to her.']]);
+        new_definition('otela', [['noun', ['power', 'authority', 'rule']]], [['lo no xasa otela.', 'You have no power.']]);
+        new_definition('ox', [['exclamations', ['uh', 'um', 'like', 'filler noise']]], [['ox, a tolva vox keston?', 'Um, what was I saying?']]);
+        newletter()
+        new_definition('pa', [['conjunction', ['but']]], [['a tolva va pa kuraly va.', 'I talk to him but I dislike him.']]);
+        new_definition('palas', [['noun', ['past', 'the past']]], [['a skada palas.', 'I\'m scared of the past.']]);
+        new_definition('palasky', [['noun', ['park']]], [['Naziyon valsky palasky', 'Zion National Park']]);
+        new_definition('pareta', [['noun', ['parent', 'parents']]], [['a slika pareta.', 'I love my parents.']]);
+        new_definition('pifel', [['noun', ['birth', 'creation', 'invention']]], [['tuvaya loye pola pifela olkavoye vox keston?', 'What is your opinion on your brother\'s birth?']]);
+        new_definition('plasy', [['preposition', ['in (a place)', 'at']]], [['a plasy ostraliya.', 'I am in Australia.']]);
+        new_definition('pola', [['preposition', ['of', 'having (the thing mentioned) as a topic; about.']]], [['tuvaya loye pola key slarato vox keston?', 'What is your opinion on gay people?']]);
+        newletter()
+        new_definition('raif', [['verb', ['write']]], [['lo lafs raif keston?', 'Can you write?']]);
+        new_definition('rejim', [['noun', ['regime']]], [['rejinazi rejim', 'nazi regime']]);
+        new_definition('relavo', [['noun', ['socialism', 'etymology: revola lavoye (worker\'s revolution)']]], [['tuvaya loye pola relavo vox keston?', 'What is your opinion on socialism?']]);
+        new_definition('relavy', [['adjective', ['socialist', 'peoples\'']]], [['relavy nonitely jonuha', 'peoples\'s republic of china']]);
+        new_definition('revol', [['noun', ['revolution', 'big change']]], [['rosiyo revol', 'Russian revolution']]);
+        new_definition('rila', [['noun', ['tribe']]], [['otal muriko rila', 'an ancient American tribe']]);
+        new_definition('rilavy', [['noun', ['family']]], [['a slika rilavy.', 'I love my family.']]);
+        new_definition('riva', [['verb', ['read']]], [['lo lafs riva keston?', 'Can you read?']]);
+        new_definition('roka', [['noun', ['rock', 'pebble', 'boulder']]], [['roka osa kalstov', 'a rock on sand']]);
+        new_definition('roma', [['noun', ['Rome']]], [['otal roma', 'ancient rome']]);
+        new_definition('romo', [['verb', ['Roman']]], [['otal romo slarato', 'ancient roman man']]);
+        new_definition('rosiya', [['noun', ['Russia']]], [['rosiya sulaka', 'Russian is big.']]);
+        new_definition('rosiyal', [['noun', ['Russian language']]], [['a no tolva rosiyal', 'I don\'t speak Russian.']]);
+        new_definition('rosiyo', [['adjective', ['Russian']]], [['a no rosiyo.', 'I am not Russian.']]);
+        new_definition('rostala', [['verb', ['named', 'called']]], [['lo rostala vox keston?', 'What are you named?']]);
+        newletter()
+        new_definition('sa', [['pronoun', ['that']]], [['sa vox keston?', 'What is that?']]);
+        new_definition('sarx', [['verb', ['pronounce']]], [['a no lafs sarx /ʀ/.', 'I cannot pronounce /ʀ/.']]);
+        new_definition('siby', [['noun', ['sibling']]], [['a no xasa siby.', 'I don\'t have siblings.']]);
+        new_definition('sivy', [['adjective', ['civil']]], [['sivy davakun', 'civil war']]);
+        new_definition('skada', [['verb', ['scared', 'scared of']]], [['a skada palas.', 'I\'m scared of the past.']]);
+        new_definition('slako', [['noun', ['food', 'breakfast', 'lunch', 'dinner', 'meal']]], [['a slika slako.', 'I like food.']]);
+        new_definition('slaratela', [['noun', ['democracy', 'etymology: otelaya slaratoye (peoples\' power)']]], [['ostraliya slaratela.', 'Australia is a democracy.']]);
+        new_definition('slarately', [['adjective', ['democratic']]], [['slarately relavy nonitely hanuka', 'democratic peoples\' republic of korea']]);
+        new_definition('slarato', [['noun', ['human', 'person', 'people', 'man', 'woman']]], [['zata slarato hu keston?', 'Who is that guy?']]);
+        new_definition('slava', [['noun', ['glory', 'greatness']]], [['slavaya murikoye', 'American glory']]);
+        new_definition('slavy', [['exclamation', ['yeah', 'nice', 'yay']]], [['', '']]);
+        new_definition('slika', [['verb', ['love', 'like', 'want']]], [['a no slika lo.', 'I don\'t like you.']]);
+        new_definition('stemotil', [['noun', ['pet', 'domestic animal']]], [['a no xasa stemotil.', 'I don\'t have pets.']]);
+        new_definition('stika', [['noun', ['stick', 'twig', 'branch']]], [['korteva zata stika⍛', 'Destroy that twig.']]);
+        new_definition('suviky', [['preposition', ['between', 'inbetween']]], [['', '']]);
+        new_definition('suvol', [['preposition', ['between (indicating a connection or relationship involving two or more parties.)']]], [['slika suvol oma , atuy', 'love between mum and dad']]);
+        new_definition('svela', [['phrase', ['this is', 'meet']]], [['svela Najak.', 'Meet Jack.']]);
+        new_definition('sy', [['pronoun', ['this']]], [['sy roka.', 'This is a rock.']]);
+        newletter()
+        new_definition('ta', [['exclamation', ['positive oh']]], [['ta v slavy', 'oh, yay']]);
+        new_definition('taka', [['adjective', ['late']]], [['taka ㅡㅊ usla', 'late 1900s']]);
+        new_definition('talara', [['noun', ['hour']]], [['ㅊ talara', '9 hours']]);
+        new_definition('tama', [['preposition', ['in (time)']]], [['a truxava tama ㅡ talara.', 'I will eat in an hour.']]);
+        new_definition('tanke', [['exclamation', ['thank (name of person)']]], [['tanke Najak.', 'Thank you, Jack.']]);
+        new_definition('tasal', [['noun', ['life', 'existance']]], [['', '']]);
+        new_definition('taslay', [['verb', ['make', 'create']]], [['taslay slako⍛', 'Make dinner.']]);
+        new_definition('taval', [['noun', ['end']]], [['tavala arim davakunoye ㅏ', 'the end of world war 2']]);
+        new_definition('tay', [['adverb', ['can i', 'can we', 'let\'s', 'should i', 'should we']]], [['tay vy truxava keston?', 'Can we eat?'], ['tay vy truxava࿈', 'Let\'s eat.']]);
+        new_definition('tolva', [['verb', ['talk', 'talk to', 'communicate', 'converse', 'speak', 'speak to']]], [['tolva va࿈', 'Talk to her.']]);
+        new_definition('tov', [['noun', ['day']]], [['', '']]);
+        new_definition('trav', [['noun', ['time']]], [['', '']]);
+        new_definition('trey', [['noun', ['tree', 'plant']]], [['a truxava trey.', 'I eat plants.']]);
+        new_definition('truxava', [['verb', ['eat', 'drink', 'consume']]], [['truxava va࿈', 'Eat it.']]);
+        new_definition('tuka', [['noun', ['touch', 'contact']]], [['a kuraly tuka.', 'I don\'t like being touched.']]);
+        new_definition('turval', [['noun', ['death', 'nonexistance']]], [['a kuraly turval, kuravay?', 'I hate death, do you?']]);
+        new_definition('tuv', [['verb', ['be at', 'live at']]], [['a tuv hiye.', 'I live here.']]);
+        new_definition('tuva', [['noun', ['opinion', 'thought']]], [['tuvaya loye pola relavo vox keston?', 'What is your opinion on socialism?']]);
+        newletter()
+        new_definition('uk', [['exclamation', ['ow', 'ouch']]], [['uk v sa zuivy.', 'Ouch, that hurt.']]);
+        new_definition('usla', [['', ['to refer to a certain century CE']]], [['ㅏㅇ usla', '21st century']]);
+        newletter()
+        new_definition('v', [['conjunction', [',']]], [['lo kruva va v vox neko keston?', 'You killed it, then what?']]);
+        new_definition('va', [['pronoun', ['he', 'she', 'it', 'they']]], [['hu va keston?', 'Who is he?']]);
+        new_definition('vaiya', [['adverb', ['why']]], [['lo vaiya muv sa?', 'Why did you do that?']]);
+        new_definition('valska', [['noun', ['country', 'nation']]], [['', '']]);
+        new_definition('valsky', [['adjective', ['national']]], [['valsky atuv', 'national anthem']]);
+        new_definition('vawa', [['adverb', ['how']]], [['lo vawa muv sa keston?', 'How did you do that?']]);
+        new_definition('veita', [['verb', ['wait']]], [['veita ㄴ kolsa᧦', 'Wait 8 seconds.']]);
+        new_definition('vel', [['conjunction', ['when']]], [['', '']]);
+        new_definition('vena', [['adverb', ['when']]], [['', '']]);
+        new_definition('vin', [['verb', ['win', 'success']]], [['a vin.', 'I win.']]);
+        new_definition('viye', [['adverb', ['where']]], [['', '']]);
+        new_definition('viyetna', [['noun', ['Vietnam']]], [['', '']]);
+        new_definition('viyetnal', [['noun', ['Vietnamese language']]], [['a tolva viyetnal.', 'I speak Vietnamese.']]);
+        new_definition('viyetno', [['adjective', ['Vietnamese']]], [['a suviyetnal.', 'I am vietnamese.']]);
+        new_definition('vo', [['pronoun', ['we (excluding you, including people not in conversation)']]], [['vo vin.', 'We win.']]);
+        new_definition('volara', [['noun', ['battle', 'fight']]], [['', '']]);
+        new_definition('voskita', [['verb', ['consider', 'think']]], [['lo lafs voskita keston?', 'You can think?']]);
+        new_definition('votara', [['noun', ['water']]], [['a slika votara.', 'I like water.']]);
+        new_definition('vox', [['pronoun', ['what']]], [['vox sa keston?', 'What is that?']]);
+        new_definition('vuskiyaliya', [['noun', ['motherland', 'fatherland', 'homeland']]], [['viyetna vuskiyaliyaya aye.', 'Vietnam is my homeland.']]);
+        new_definition('vy', [['pronoun', ['we (including you)']]], [['vy vin.', 'We win.']]);
+        newletter()
+        new_definition('xasa', [['verb', ['have', 'own']]], [['a no xasa siby.', 'I don\'t have siblings.']]);
+        new_definition('xava', [['exclamation', ['hey', 'oi', 'call for attention']]], [['xava, lo viye keston?', 'Hey, where are you?']]);
+        new_definition('xelu', [['exclamation', ['hello', 'hi', 'greetings', 'how do you do', 'good morning', 'good afternoon', 'good day']]], [['xelu, a rostala Nakatiya.', 'Hi, I\'m Katiya.']]);
+        new_definition('xola', [['noun', ['virtue ' + tokara]]], [['', '']]);
+        new_definition('xuil', [['verb', ['sing']]], [['a no lafs xuil.', 'I cannot sing.']]);
+        new_definition('xula', [['noun', ['foot']]], [['', '']]);
+        newletter()
+        new_definition('y', [['conjunction', ['if. order always goes if, y, then']]], [['lo slika va y tolva va࿈', 'Talk to her if you like her.']]);
+        new_definition('ya', [['exclamation', ['yes', 'yeah']]], [['', '']]);
+        new_definition('yeniya', [['noun', ['enemy', 'opposition', 'foe']]], [['lo yeniyaya aye.', 'You are my enemy.']]);
+        newletter()
+        new_definition('zata', [['determiner', ['that']]], [['zata slarato vox?', 'What is that person?']]);
+        new_definition('zeva', [['phrase', ['there is', 'there are', 'there was']]], [['', '']]);
+        new_definition('zisa', [['determiner', ['this']]], [['', '']]);
+        new_definition('ziye', [['adverb', ['there']]], [['', '']]);
+        new_definition('zuiva', [['noun', ['pain']]], [['', '']]);
+        new_definition('zuivy', [['verb', ['hurt', 'injure']]], [['va zuivy a!', 'He hurt me!']]);
+        new_definition('zuixa', [['verb', ['save', 'help', 'support']]], [['zuixa va⍛', 'Help her!']]);
+
+
+
+    </script>
+
+    <style>
+        .newletters {
+            clear: both;
+            visibility: hidden;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+</html>

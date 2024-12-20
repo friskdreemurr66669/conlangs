@@ -1,0 +1,27 @@
+a - a
+e - e
+i - i
+o - o
+u - u
+
+j - ʒ
+f - f
+k - k
+l - l
+t - t
+r - r
+p - p
+x - x
+m - m
+s - s
+v - v
+w - ʃ
+h - h
+v - v
+
+y - j / i
+
+
+
+digraphs
+tj - d͡ʒ

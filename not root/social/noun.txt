@@ -1,0 +1,45 @@
+nayem
+	name
+
+fratav
+	friend
+	companion
+
+rilavy
+	family
+
+oma
+	mother
+	mum
+
+atuy
+	father
+	dad
+
+pareta
+	parent
+
+kavoma
+	grandmother
+	grandma
+
+kavatuy
+	grandfather
+	grandpa
+
+kavapareta
+	grandparent
+
+siby
+	sibling
+
+olkav
+	brother
+
+olivy
+	sister
+
+yeniya
+	enemy
+	opposition
+	foe
