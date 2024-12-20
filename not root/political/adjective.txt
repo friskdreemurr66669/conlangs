@@ -3,3 +3,5 @@ valsky
 
 sivy
 	civil
+	social
+	communal
