@@ -16,3 +16,5 @@ l(a) - repeated (re-)
 y(e) - adjective to adverb (eg: daka -> yedaka)
 r(o) - adjective to noun (eg: key -> rokey)
 s(o) - verb to noun (eg: kruva -> sokruva)
+
+ant(i) - anti / oppose
